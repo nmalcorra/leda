@@ -1,0 +1,19 @@
+<div class="container">
+ <div class="paneles">
+        <div class="panel panel-info">
+	  	 	<div class="panel-heading">
+	            <h3 class="panel-title">Agregar un producto</h3>
+	        </div>
+	        <div class="panel-body">
+	        	<%= form_for :product, url: products_path do |f| %>
+				  <%= f.label "Descripcion" %>
+   				  <%= f.text_field :description %>
+   				  <%= f.label "Precio" %>
+   				  <%= f.number_field :price %>
+				  <%= f.submit "Agregar", class: "btn btn-success" %>
+				<% end %>
+	        </div>
+	  	</div>
+  </div>
+</div>
+
