@@ -19,6 +19,9 @@ gem 'mysql2', '~> 0.3.18'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'jquery-turbolinks' 
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -29,12 +32,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
 # bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
 # para el login
 gem 'devise'
+
+#datatables
+
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
