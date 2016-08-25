@@ -1,0 +1,8 @@
+es:
+  helpers:
+    submit:
+      create: "Agregar %{model}"
+      update: "Modificar %{model}"
+      product: 
+        create: 'Agregar Producto'
+        update: 'Editar Producto'

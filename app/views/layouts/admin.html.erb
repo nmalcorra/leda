@@ -22,7 +22,7 @@
 	        <li><%= link_to "Pedidos", "#"  %></li>
 	        <li><%= link_to "Facturas", "#"  %></li>
 	        <li><%= link_to "Clientes", "#"  %></li>
-	        <li><%= link_to "Cerrar sesion",  "#" %></li>
+	        <li><%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %></li>
 	      </ul>
 	    </div>
 	  </div>

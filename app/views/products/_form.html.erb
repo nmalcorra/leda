@@ -11,13 +11,10 @@
     </div>
   <% end %>
 
-    <%= form_for :product, url: products_path do |f| %>
-          <%= f.label "Descripcion" %>
-            <%= f.text_field :description %>
-            <%= f.label "Precio" %>
-            <%= f.number_field :price %>
-          <%= f.submit "Agregar", class: "btn btn-success" %>
-          <%= link_to 'Cancelar', products_path, class: "btn btn-warning" %>
-
-        <% end %>
+    <%= f.label "Descripcion" %>
+    <%= f.text_field :description %>
+    <%= f.label "Precio" %>
+    <%= f.number_field :price %>
+    <%= f.submit class: "btn btn-success" %>
+    <%= link_to 'Cancelar', products_path, class: "btn btn-danger" %>
 <% end %>
