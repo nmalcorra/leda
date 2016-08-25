@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :products
   devise_for :users
   get 'home/index'
-
+  get '/admin', to: 'admin#index', as: 'admin_path'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
