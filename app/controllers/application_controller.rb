@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   	if current_user.role == 'admin'
   		"/admin"
   	else
-  		root_path
+  		"/invited"
   	end
   end
 
