@@ -11,20 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826221752) do
+ActiveRecord::Schema.define(version: 20160913054804) do
 
   create_table "cities", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text    "name",        limit: 65535
+    t.integer "cp",          limit: 4
+    t.integer "province_id", limit: 4
   end
 
-  create_table "ciudad", force: :cascade do |t|
-    t.string  "ciudad_nombre", limit: 60, null: false
-    t.integer "cp",            limit: 4,  null: false
-    t.integer "provincia_id",  limit: 2,  null: false
+  create_table "ciudades", force: :cascade do |t|
+    t.text    "name",        limit: 65535, null: false
+    t.integer "cp",          limit: 4,     null: false
+    t.integer "province_id", limit: 4,     null: false
   end
 
-  add_index "ciudad", ["cp"], name: "cp", using: :btree
+  add_index "ciudades", ["cp"], name: "cp", using: :btree
+  add_index "ciudades", ["id"], name: "id", using: :btree
+  add_index "ciudades", ["id"], name: "id_2", using: :btree
+  add_index "ciudades", ["id"], name: "id_3", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "description", limit: 255
@@ -34,12 +38,7 @@ ActiveRecord::Schema.define(version: 20160826221752) do
   end
 
   create_table "provinces", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "provincia", force: :cascade do |t|
-    t.string "provincia_nombre", limit: 50, null: false
+    t.text "name", limit: 65535, null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -17,10 +17,23 @@
                             <%= f.text_field :surname, class: "form-control", placeholder:"Apellido" %>
                        </div>
                         <div class="form-group">
-                            <%= f.email_field :email, class: "form-control", placeholder:"Email" %>
+                            <%= f.email_field :email, autocomplete: "off", class: "form-control", placeholder:"Email" %>
                        </div>
                         <div class="form-group">
-                            <%= f.email_field :email, class: "form-control", placeholder:"Email" %>
+                          <%= f.label "Provincia:" %> <br />
+                          <select id="province_id" name="province_id">
+                          <% for p in (Province.order(:provincia_nombre).all) %>
+                            <option value="<%= p.id %>"><%= p.provincia_nombre %></option>
+                          <% end %>
+                          </select>
+                       </div>
+                        <div class="form-group">
+                          <%= f.label "Localidad:" %> <br />
+                          <select id="city_id" name="city_id">
+                          <% for c in (City.order(:ciudad_nombre).all) %>
+                            <option value="<%= c.id %>"><%= c.ciudad_nombre %></option>
+                          <% end %>
+                          </select>
                        </div>
                        <div class="form-group">
                           <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder:"Contraseña" %> 
